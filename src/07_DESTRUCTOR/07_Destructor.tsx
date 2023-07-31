@@ -8,7 +8,7 @@ type StreetType = {
     title: string
 }
 
-type ManType = {
+export type ManType = {
     name: string
     age: number
     lessons: LessonType[]
@@ -20,7 +20,7 @@ type ManType = {
 let props = {
     name: "Lena",
     age: 32,
-    lessons: [{title: "1"}, {title: "2"}],
+    lessons: [{title: "1"}, {title: "2"},{title: "3"}],
     adress: {
         street: {
             title: "Nizhegorodskaya street"
@@ -49,7 +49,7 @@ export const Destructuring: React.FC<DestructuringType> = (props) => {
 
     // сразу вытащ  и тайтл и найм
     const {title, man:{name}}=props
-    console.log("LEna")
+
     return (
         <div>
             <h1>{title}</h1>
@@ -58,4 +58,12 @@ export const Destructuring: React.FC<DestructuringType> = (props) => {
         </div>
     );
 };
+
+// деструктуризация массива
+const useStateCustom = (message:string)=>{
+    return [message, function (){}]
+}
+
+
+const [message, setMessage]=useStateCustom("Hello")
 

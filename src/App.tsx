@@ -1,16 +1,14 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
-import {User} from "./CallBack, onclick, onchnge/User";
-import {Destructuring} from "./Destructor/Destructuring";
-import AssociativeArray from "./associative_array/Acoc_massive";
+import {User} from './06_callback_onClick_onChange/06';
+
 
 function App() {
     return (
         <div className="App">
-            {/*<User/>*/}
+            <User/>
             {/*  <Destructuring />*/}
-            <AssociativeArray/>
+            {/*<AssociativeArray/>*/}
         </div>
     );
 }
